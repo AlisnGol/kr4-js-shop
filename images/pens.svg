@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Набор гелевых ручек">
+  <rect width="400" height="300" fill="#eef5ff"/>
+  <rect x="120" y="70" width="26" height="140" rx="13" fill="#0057b8"/>
+  <path d="M120 210h26l-13 30z" fill="#003f86"/>
+  <rect x="170" y="70" width="26" height="140" rx="13" fill="#003f86"/>
+  <path d="M170 210h26l-13 30z" fill="#0057b8"/>
+  <rect x="220" y="70" width="26" height="140" rx="13" fill="#0057b8"/>
+  <path d="M220 210h26l-13 30z" fill="#003f86"/>
+  <rect x="270" y="70" width="26" height="140" rx="13" fill="#003f86"/>
+  <path d="M270 210h26l-13 30z" fill="#0057b8"/>
+</svg>

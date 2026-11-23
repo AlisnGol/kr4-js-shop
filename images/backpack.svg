@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Школьный рюкзак">
+  <rect width="400" height="300" fill="#eef5ff"/>
+  <path d="M140 110c0-33 27-60 60-60s60 27 60 60v130a20 20 0 0 1-20 20H160a20 20 0 0 1-20-20z" fill="#0057b8"/>
+  <path d="M170 110a30 30 0 0 1 60 0" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  <rect x="120" y="130" width="24" height="90" rx="12" fill="#003f86"/>
+  <rect x="256" y="130" width="24" height="90" rx="12" fill="#003f86"/>
+  <rect x="160" y="160" width="80" height="60" rx="12" fill="#eef5ff"/>
+  <rect x="186" y="183" width="28" height="10" rx="5" fill="#0057b8"/>
+</svg>

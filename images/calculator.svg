@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Инженерный калькулятор">
+  <rect width="400" height="300" fill="#eef5ff"/>
+  <rect x="130" y="50" width="140" height="200" rx="14" fill="#0057b8"/>
+  <rect x="148" y="70" width="104" height="40" rx="6" fill="#ffffff"/>
+  <rect x="148" y="125" width="28" height="22" rx="5" fill="#eef5ff"/>
+  <rect x="186" y="125" width="28" height="22" rx="5" fill="#eef5ff"/>
+  <rect x="224" y="125" width="28" height="22" rx="5" fill="#eef5ff"/>
+  <rect x="148" y="157" width="28" height="22" rx="5" fill="#eef5ff"/>
+  <rect x="186" y="157" width="28" height="22" rx="5" fill="#eef5ff"/>
+  <rect x="224" y="157" width="28" height="22" rx="5" fill="#eef5ff"/>
+  <rect x="148" y="189" width="28" height="22" rx="5" fill="#eef5ff"/>
+  <rect x="186" y="189" width="28" height="22" rx="5" fill="#eef5ff"/>
+  <rect x="224" y="189" width="28" height="22" rx="5" fill="#eef5ff"/>
+</svg>

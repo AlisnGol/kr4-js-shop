@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Набор для черчения">
+  <rect width="400" height="300" fill="#eef5ff"/>
+  <path d="M200 75L152 225M200 75l48 150" stroke="#0057b8" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <circle cx="200" cy="72" r="16" fill="#003f86"/>
+  <rect x="90" y="235" width="220" height="30" rx="6" fill="#003f86"/>
+  <line x1="115" y1="235" x2="115" y2="250" stroke="#eef5ff" stroke-width="4" stroke-linecap="round"/>
+  <line x1="145" y1="235" x2="145" y2="250" stroke="#eef5ff" stroke-width="4" stroke-linecap="round"/>
+  <line x1="175" y1="235" x2="175" y2="250" stroke="#eef5ff" stroke-width="4" stroke-linecap="round"/>
+  <line x1="205" y1="235" x2="205" y2="250" stroke="#eef5ff" stroke-width="4" stroke-linecap="round"/>
+  <line x1="235" y1="235" x2="235" y2="250" stroke="#eef5ff" stroke-width="4" stroke-linecap="round"/>
+  <line x1="265" y1="235" x2="265" y2="250" stroke="#eef5ff" stroke-width="4" stroke-linecap="round"/>
+</svg>

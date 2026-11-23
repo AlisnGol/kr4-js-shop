@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Фон со школьными принадлежностями">
+  <rect width="1200" height="500" fill="#0057b8"/>
+  <circle cx="1060" cy="70" r="170" fill="#003f86" opacity="0.55"/>
+  <circle cx="140" cy="440" r="200" fill="#003f86" opacity="0.45"/>
+  <circle cx="980" cy="430" r="90" fill="#ffffff" opacity="0.08"/>
+  <rect x="930" y="150" width="26" height="150" rx="13" fill="#ffffff" opacity="0.25"/>
+  <path d="M930 300h26l-13 34z" fill="#ffffff" opacity="0.35"/>
+  <rect x="990" y="180" width="26" height="120" rx="13" fill="#ffffff" opacity="0.2"/>
+  <path d="M990 300h26l-13 34z" fill="#ffffff" opacity="0.3"/>
+  <rect x="120" y="120" width="150" height="100" rx="8" fill="#ffffff" opacity="0.12"/>
+  <line x1="150" y1="150" x2="240" y2="150" stroke="#ffffff" stroke-width="6" opacity="0.25" stroke-linecap="round"/>
+  <line x1="150" y1="175" x2="240" y2="175" stroke="#ffffff" stroke-width="6" opacity="0.25" stroke-linecap="round"/>
+  <line x1="150" y1="200" x2="205" y2="200" stroke="#ffffff" stroke-width="6" opacity="0.25" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ШколаМаркет — школьные товары, канцелярия и учебная литература с доставкой.">
+  <title>ШколаМаркет — школьные товары и канцелярия</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">
+    Перейти к содержимому
+  </a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ШколаМаркет</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page" >Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero">
+      <h1 class="hero__title">Всё для школы в одном месте</h1>
+      <p class="hero__text">
+        Рюкзаки, канцелярия, тетради и учебная литература для учеников
+        с 1 по 11 класс. Собираем комплекты к началу учебного года
+        и доставляем за один-два дня.
+      </p>
+      <a class="button button--primary hero__button" href="catalog.html">Перейти в каталог</a>
+    </section>
+
+    <section class="section" id="advantages">
+      <h2 class="section__title">Почему выбирают нас</h2>
+      <ul class="advantages-list">
+        <li class="advantages-list__item">
+          <strong>Готовые комплекты по классам.</strong> Не нужно сверяться
+          со списком от учителя — мы уже собрали всё необходимое.
+        </li>
+        <li class="advantages-list__item">
+          <strong>Проверенные производители.</strong> Работаем только
+          с сертифицированной продукцией, безопасной для детей.
+        </li>
+        <li class="advantages-list__item">
+          <strong>Доставка за 1–2 дня.</strong> По городу курьером
+          или самовывоз из пункта выдачи в день заказа.
+        </li>
+        <li class="advantages-list__item">
+          <strong>Обмен в течение 14 дней.</strong> Если размер рюкзака
+          не подошёл — поменяем без вопросов.
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="popular">
+      <h2 class="section__title">Популярные товары</h2>
+      <div class="products-grid">
+
+        <article class="product-card">
+          <span class="product-card__badge product-card__badge--hit">Хит</span>
+          <img
+              class="product-card__image"
+              src="images/backpack-800.png"
+              srcset="images/backpack-400.png 400w,
+                      images/backpack-800.png 800w"
+              sizes="(max-width: 767px) calc(100vw - 66px),
+                    (max-width: 1023px) 45vw,
+                    350px"
+              width="800"
+              height="730"
+              alt="Чёрный школьный рюкзак с розовыми лямками и кошачьей мордочкой"
+              loading="lazy"
+          >
+          <h3 class="product-card__title">Рюкзак школьный ортопедический</h3>
+          <p class="product-card__description">
+            Жёсткая спинка, светоотражающие вставки и два отделения под
+            учебники формата А4. Вес всего 780 грамм.
+          </p>
+          <p class="product-card__price">3 490 ₽</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Рюкзак школьный ортопедический">
+            Заказать
+          </button>
+        </article>
+
+        <article class="product-card">
+          <span class="product-card__badge product-card__badge--new">Новинка</span>
+          <img class="product-card__image"
+              src="images/pencil-case.png"
+              width="400" height="300"
+              alt="Чёрно-розовый пенал с кошачьими ушками и брелоком" loading="lazy">
+
+          <h3 class="product-card__title">
+            Пенал-органайзер с наполнением
+          </h3>
+          <p class="product-card__description">
+            Две молнии, резинки-держатели и 24 предмета внутри: ручки,
+            карандаши, линейка, ластик и точилка.
+          </p>
+          <p class="product-card__price">1 250 ₽</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Пенал-органайзер с наполнением">
+            Заказать
+          </button>
+        </article>
+
+        <article class="product-card">
+          <span class="product-card__badge product-card__badge--sale">Скидка</span>
+          <img class="product-card__image" src="images/pens.png" width="400" height="300"
+               alt="Набор гелевых ручек разных цветов" loading="lazy">
+          <h3 class="product-card__title">Набор гелевых ручек, 12 цветов</h3>
+          <p class="product-card__description">
+            Пишут мягко и не мажут. Прозрачный корпус, чтобы видеть,
+            сколько чернил осталось.
+          </p>
+          <p class="product-card__price">290 ₽</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Набор гелевых ручек, 12 цветов">
+            Заказать
+          </button>
+        </article>
+        
+        <article class="product-card">
+          <span class="product-card__badge product-card__badge--hit">Хит</span>
+          <img class="product-card__image" src="images/calculator.png" width="400" height="300"
+               alt="Инженерный калькулятор с большим экраном" loading="lazy">
+          <h3 class="product-card__title">Калькулятор инженерный</h3>
+          <p class="product-card__description">
+            240 функций, двухстрочный экран, питание от батарейки
+            и солнечной панели. Допускается на ОГЭ и ЕГЭ.
+          </p>
+          <p class="product-card__price">1 190 ₽</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Калькулятор инженерный">
+            Заказать
+          </button>
+        </article>
+
+        <article class="product-card">
+          <span class="product-card__badge product-card__badge--new">Новинка</span>
+          <img class="product-card__image" src="images/paints.png" width="400" height="300"
+               alt="Палитра акварельных красок с кистью" loading="lazy">
+          <h3 class="product-card__title">Краски акварельные, 24 цвета</h3>
+          <p class="product-card__description">
+            Медовая акварель в палитре, в комплекте кисть
+            из натурального ворса.
+          </p>
+          <p class="product-card__price">540 ₽</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Краски акварельные, 24 цвета">
+            Заказать
+          </button>
+        </article>
+
+        <article class="product-card">
+          <img class="product-card__image" src="images/album.png" width="400" height="300"
+               alt="Альбом для рисования на пружине" loading="lazy">
+          <h3 class="product-card__title">Альбом для рисования, 40 листов</h3>
+          <p class="product-card__description">
+            Плотная бумага 120 г/м², не просвечивает под маркерами.
+            Склейка по верхнему краю, листы легко отрываются.
+          </p>
+          <p class="product-card__price">220 ₽</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Альбом для рисования, 40 листов">
+            Заказать
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <aside class="aside-info">
+      <h2 class="aside-info__title">Комплекты к 1 сентября</h2>
+      <p class="aside-info__text">
+        Соберём готовый набор по списку вашего класса: тетради, канцелярия,
+        обложки и дневник. Напишите класс в комментарии к заявке — подберём
+        комплект и посчитаем стоимость.
+      </p>
+    </aside>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <p>&copy; 2026 ШколаМаркет. Учебный проект.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input id="selected-product" name="selected-product" type="hidden">
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input class="order-form__input" id="order-name" name="name" type="text"
+               placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input class="order-form__input" id="order-email" name="email" type="email"
+               placeholder="example@mail.ru" autocomplete="email" required>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-phone">
+          Телефон *
+        </label>
+        <input
+          class="order-form__input"
+          id="order-phone"
+          name="phone"
+          type="tel"
+          inputmode="tel"
+          autocomplete="tel"
+          placeholder="+7 (900) 000-00-00"
+          pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+          aria-describedby="dialog-phone-hint"
+          required
+        >
+        <small class="order-form__hint" id="dialog-phone-hint">
+          Формат: +7 (900) 000-00-00
+        </small>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-date">Дата связи</label>
+        <input class="order-form__input" id="order-date" name="date" type="date">
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-topic">Тема заявки</label>
+        <select class="order-form__select" id="order-topic" name="topic" required>
+          <option value="">Выберите тему</option>
+          <option value="product">Заказ товара</option>
+          <option value="set">Комплект к 1 сентября</option>
+          <option value="consultation">Консультация</option>
+          <option value="delivery">Доставка</option>
+        </select>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-comment">Комментарий</label>
+        <textarea class="order-form__textarea" id="order-comment" name="comment" rows="4"
+                  placeholder="Класс, список от учителя, пожелания по заказу"></textarea>
+      </div>
+
+      <div class="order-form__field order-form__field--checkbox">
+        <label class="order-form__label">
+          <input class="order-form__checkbox" id="order-agreement" name="agreement" type="checkbox" required>
+          Я согласен на обработку данных
+        </label>
+      </div>
+
+      <div class="order-form__actions">
+        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+        <button class="button button--primary" type="submit">Отправить заявку</button>
+      </div>
+    </form>
+  </dialog>
+
+  <p class="success-message"
+    id="success-message"
+    role="status"
+    hidden>
+    Учебная заявка проверена. Данные не отправлялись.
+  </p>
+
+  <a class="scroll-top" href="#top" aria-label="Наверх">↑</a>
+</body>
+</html>
