@@ -7,7 +7,9 @@
   <title>Каталог товаров — ШколаМаркет</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
-
+  <script src="js/data.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/catalog.js" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main-content">
@@ -19,11 +21,10 @@
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page"> Каталог </a> </li>
+          <li class="site-nav__item"><a class="site-nav__link" href="cart.html">Корзина</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
         </ul>
       </nav>
     </div>
@@ -43,191 +44,64 @@
       </p>
     </section>
 
-    <section class="catalog-layout">
-      <aside class="catalog-filters">
-        <h2 class="catalog-filters__title">Фильтры</h2>
-        <form class="filters-form" action="#" method="get">
-          <fieldset class="filters-form__group">
-            <legend class="filters-form__legend">Категория</legend>
-            <label class="filters-form__label">
-              <input class="filters-form__checkbox" type="checkbox" name="category" value="backpacks">
-              Рюкзаки и сумки
-            </label>
-            <label class="filters-form__label">
-              <input class="filters-form__checkbox" type="checkbox" name="category" value="stationery">
-              Канцелярия
-            </label>
-            <label class="filters-form__label">
-              <input class="filters-form__checkbox" type="checkbox" name="category" value="notebooks">
-              Тетради и бумага
-            </label>
-            <label class="filters-form__label">
-              <input class="filters-form__checkbox" type="checkbox" name="category" value="books">
-              Учебная литература
-            </label>
-          </fieldset>
+    <section class="catalog-layout" aria-label="Каталог товаров">
+  <aside class="catalog-filters">
+    <h2 class="catalog-filters__title">Поиск и фильтры</h2>
 
-          <fieldset class="filters-form__group">
-            <legend class="filters-form__legend">Класс</legend>
-            <label class="filters-form__label" for="grade">Выберите класс</label>
-            <select class="filters-form__select" id="grade" name="grade">
-              <option value="">Любой</option>
-              <option value="1-4">1–4 класс</option>
-              <option value="5-9">5–9 класс</option>
-              <option value="10-11">10–11 класс</option>
-            </select>
-          </fieldset>
+    <div class="filters-form">
+      <div>
+        <label class="filters-form__label" for="catalog-search">
+          Название товара
+        </label>
+        <input
+          class="filters-form__input"
+          id="catalog-search"
+          type="search"
+          placeholder="Например, пенал"
+        >
+      </div>
 
-          <fieldset class="filters-form__group">
-            <legend class="filters-form__legend">Цена, ₽</legend>
-            <label class="filters-form__label" for="price-from">От</label>
-            <input class="filters-form__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
-            <label class="filters-form__label" for="price-to">До</label>
-            <input class="filters-form__input" id="price-to" name="price-to" type="number" min="0" placeholder="5000">
-          </fieldset>
+      <div>
+        <label class="filters-form__label" for="catalog-category">
+          Категория
+        </label>
+        <select class="filters-form__select" id="catalog-category">
+          <option value="">Все категории</option>
+          <option value="backpacks">Рюкзаки и сумки</option>
+          <option value="stationery">Канцелярия</option>
+          <option value="notebooks">Тетради и бумага</option>
+          <option value="books">Учебная литература</option>
+        </select>
+      </div>
 
-          <button class="button button--primary" type="submit">Применить</button>
-        </form>
-      </aside>
+      <div>
+        <label class="filters-form__label" for="catalog-sort">
+          Порядок товаров
+        </label>
+        <select class="filters-form__select" id="catalog-sort">
+          <option value="default">Исходный порядок</option>
+          <option value="price-asc">Сначала дешевле</option>
+          <option value="price-desc">Сначала дороже</option>
+          <option value="title">По названию</option>
+        </select>
+      </div>
+    </div>
+  </aside>
 
-      <section class="catalog-products">
-        <h2 class="section__title">Все товары</h2>
-        <div class="products-grid">
-
-          <article class="product-card">
-            <span class="product-card__badge product-card__badge--hit">Хит</span>
-            <img
-              class="product-card__image"
-              src="images/backpack-800.png"
-              srcset="images/backpack-400.png 400w,
-                      images/backpack-800.png 800w"
-              sizes="(max-width: 767px) calc(100vw - 66px),
-                    (max-width: 1023px) 45vw,
-                    350px"
-              width="800"
-              height="730"
-              alt="Чёрный школьный рюкзак с розовыми лямками и кошачьей мордочкой"
-              loading="lazy"
-            >
-            <h3 class="product-card__title">Рюкзак школьный ортопедический</h3>
-            <p class="product-card__description">
-              Жёсткая спинка с вентиляцией, светоотражающие вставки,
-              два отделения под учебники формата А4. Вес 780 грамм.
-            </p>
-            <p class="product-card__price">3 490 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <span class="product-card__badge product-card__badge--new">Новинка</span>
-            <img class="product-card__image"
-                src="images/atlas.png"
-                width="400" height="300"
-                alt="Атлас по географии для 7 класса с фиолетовой обложкой" loading="lazy">
-
-            <h3 class="product-card__title">
-              Атлас по географии, 7 класс
-            </h3>
-            <p class="product-card__description">
-              Соответствует школьной программе. Крупные карты, контурные карты в комплекте, плотная бумага.
-            </p>
-            <p class="product-card__price">1 250 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <span class="product-card__badge product-card__badge--sale">Скидка</span>
-            <img class="product-card__image" src="images/pens.png" width="400" height="300"
-                 alt="Набор гелевых ручек разных цветов" loading="lazy">
-            <h3 class="product-card__title">Набор гелевых ручек, 12 цветов</h3>
-            <p class="product-card__description">
-              Пишут мягко и не мажут. Прозрачный корпус, чтобы видеть,
-              сколько чернил осталось.
-            </p>
-            <p class="product-card__price">290 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <img class="product-card__image" src="images/notebooks.png" width="400" height="300"
-                 alt="Стопка школьных тетрадей в клетку и линейку" loading="lazy">
-            <h3 class="product-card__title">Набор тетрадей, 20 шт.</h3>
-            <p class="product-card__description">
-              Тетради 12 листов в клетку и линейку. Плотная белая бумага
-              60 г/м², обложка из мелованного картона.
-            </p>
-            <p class="product-card__price">390 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <img class="product-card__image"
-                src="images/pencil-case.png"
-                width="400" height="300"
-                alt="Чёрно-розовый пенал с кошачьими ушками и брелоком" loading="lazy">
-            <h3 class="product-card__title">
-              Пенал-органайзер с наполнением
-            </h3>
-            <p class="product-card__description">
-              Две молнии и резинки-держатели. Внутри 24 предмета: ручки, карандаши, линейка, ластик и точилка.
-            </p>
-            <p class="product-card__price">480 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <img class="product-card__image" src="images/drawing-set.png" width="400" height="300"
-                 alt="Циркуль и линейка из набора для черчения" loading="lazy">
-            <h3 class="product-card__title">Набор для черчения</h3>
-            <p class="product-card__description">
-              Металлический циркуль с запасным грифелем, две линейки,
-              транспортир и два угольника в жёстком футляре.
-            </p>
-            <p class="product-card__price">850 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-          
-          <article class="product-card">
-            <span class="product-card__badge product-card__badge--hit">Хит</span>
-            <img class="product-card__image" src="images/calculator.png" width="400" height="300"
-                 alt="Инженерный калькулятор с большим экраном" loading="lazy">
-            <h3 class="product-card__title">Калькулятор инженерный</h3>
-            <p class="product-card__description">
-              240 функций, двухстрочный экран, работа от батарейки
-              и солнечной панели. Допускается на ОГЭ и ЕГЭ.
-            </p>
-            <p class="product-card__price">1 190 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <span class="product-card__badge product-card__badge--new">Новинка</span>
-            <img class="product-card__image" src="images/paints.png" width="400" height="300"
-                 alt="Палитра акварельных красок с кистью" loading="lazy">
-            <h3 class="product-card__title">Краски акварельные, 24 цвета</h3>
-            <p class="product-card__description">
-              Медовая акварель в пластиковой палитре. В комплекте кисть
-              из натурального ворса, размер №3.
-            </p>
-            <p class="product-card__price">540 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <img class="product-card__image" src="images/album.png" width="400" height="300"
-                 alt="Альбом для рисования на пружине" loading="lazy">
-            <h3 class="product-card__title">Альбом для рисования, 40 листов</h3>
-            <p class="product-card__description">
-              Плотная бумага 120 г/м², не просвечивает под маркерами.
-              Склейка по верхнему краю, листы легко отрываются.
-            </p>
-            <p class="product-card__price">220 ₽</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-          
-        </div>
-      </section>
-    </section>
+  <section class="catalog-products" aria-labelledby="catalog-title">
+    <h2 class="section__title" id="catalog-title">Товары</h2>
+    <p id="catalog-count" role="status"></p>
+    <p>
+      <a href="cart.html">
+        Открыть корзину (<span data-cart-count>0</span>)
+      </a>
+    </p>
+    <p id="cart-message" role="status"></p>
+    <p id="catalog-empty" hidden>
+      Товары не найдены. Измени запрос или выбери другую категорию.
+    </p>
+    <div class="products-grid" id="catalog-grid"></div>
+  </section>
   </main>
 
   <footer class="site-footer">

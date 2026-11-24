@@ -7,6 +7,10 @@
   <title>Оформление заявки — ШколаМаркет</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/checkout.js" defer></script>
+  <script src="js/validation.js" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main-content">
@@ -19,10 +23,9 @@
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="cart.html">Корзина</a></li>
           <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="order.html" aria-current="page">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
         </ul>
       </nav>
     </div>
@@ -45,7 +48,27 @@
 
     <section class="order-layout">
       <div class="order-layout__form">
-        <form class="order-form order-form--page" action="#" method="post">
+        <form
+          class="order-form order-form--page"
+          id="checkout-form"
+          action="#"
+          method="post"
+          novalidate
+        >
+
+        <section id="checkout-summary" aria-labelledby="checkout-summary-title" hidden>
+        <h2 class="section__title" id="checkout-summary-title">
+          Товары из корзины
+        </h2>
+
+        <ul id="checkout-items"></ul>
+        <p id="checkout-total"></p>
+
+        <p>
+          <a href="cart.html">Изменить состав корзины</a>
+        </p>
+      </section>
+
           <fieldset class="order-form__group">
             <legend class="order-form__legend">Контактные данные</legend>
 
@@ -87,13 +110,12 @@
                 type="tel"
                 inputmode="tel"
                 placeholder="+7 (900) 000-00-00"
-                pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
                 autocomplete="tel"
                 aria-describedby="phone-hint"
                 required
               >
               <small class="order-form__hint" id="phone-hint">
-                Формат: +7 (900) 000-00-00
+                Например: +7 (900) 000-00-00 или 89000000000
               </small>
             </div>
           </fieldset>
@@ -165,6 +187,7 @@
             <button class="button button--primary" type="submit">Отправить заявку</button>
             <button class="button button--secondary" type="reset">Очистить форму</button>
           </div>
+          <p id="checkout-message" role="status"></p>
         </form>
       </div>
 
