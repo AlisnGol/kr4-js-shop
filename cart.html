@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Корзина товаров магазина ШколаМаркет.">
+  <title>Корзина — ШколаМаркет</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script src="js/data.js" defer></script>
+  <script src="js/cart.js" defer></script>
+</head>
+
+<body id="top">
+  <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ШколаМаркет</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li>
+            <a class="site-nav__link site-nav__link--active"
+               href="cart.html"
+               aria-current="page">
+              Корзина (<span data-cart-count>0</span>)
+            </a>
+          </li>
+          <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="section" aria-labelledby="cart-title">
+      <h1 class="section__title" id="cart-title">Корзина</h1>
+
+      <p id="cart-message" role="status"></p>
+
+      <div id="cart-empty" hidden>
+        <p>В корзине пока нет товаров.</p>
+        <a class="button button--primary" href="catalog.html">
+          Выбрать товары
+        </a>
+      </div>
+
+      <div id="cart-content" hidden>
+        <div class="cart-list" id="cart-list"></div>
+
+        <div class="order-form__field">
+            <label class="order-form__label" for="promo-code">
+                Промокод
+            </label>
+
+            <p class="order-form__hint" id="promo-hint">
+                Учебный промокод SCHOOL10 даёт скидку 10%.
+            </p>
+
+            <input
+                class="order-form__input"
+                id="promo-code"
+                type="text"
+                aria-describedby="promo-hint"
+                autocomplete="off"
+            >
+
+            <div class="order-form__actions">
+                <button class="button button--secondary"
+                        id="apply-promo"
+                        type="button">
+                Применить
+                </button>
+
+                <button class="button button--secondary"
+                        id="remove-promo"
+                        type="button">
+                Убрать скидку
+                </button>
+            </div>
+
+            <p id="promo-message" role="status"></p>
+        </div>
+
+        <p id="cart-discount"></p>
+
+        <p class="cart-total">
+          Итого: <strong id="cart-total"></strong>
+        </p>
+
+        <div class="product__actions">
+          <a class="button button--primary" href="order.html">
+            Перейти к заявке
+          </a>
+          <a class="button button--secondary" href="catalog.html">
+            Продолжить покупки
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 ШколаМаркет. Учебный проект.</p>
+  </footer>
+</body>
+</html>
